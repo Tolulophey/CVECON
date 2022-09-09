@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator using javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./images/logo.png"/>
+</head>
+<body>
+    <header>
+        <div class="heading_text">
+            <h1>Generate Your CVECON 7.0 certificate of attendance in on this page</h1>
+            <h2>You just only need to supply your name and print your PDF certificate out</h2>
+        </div>
+    </header>
+    <main>
+        <div>
+            <input type="text" name="userName" class="question" id="name" required autocomplete="off" />
+            <label for="name"><span>What's your name?</span></label>
+            <input type="submit" id="submitBtn" value="Get Certificate"/>
+        </div>
+    </main>
+    <footer>
+        <h2>Some pictures from the event</h2>
+        <div class="footer_image">
+            <img src="./images/banner.jpg" alt="footer-image">
+            <img src="./images/footer1.jpg" alt="footer-image">
+            <img src="./images/footer2.jpg" alt="footer-image">
+            <img src="./images/footer3.jpg" alt="footer-image">
+        </div>
+    </footer>
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+    <script src="filesaver.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

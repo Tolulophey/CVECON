@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo Narrow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/archivonarrow/v24/tss5ApVBdCYD5Q7hcxTE1ArZ0Zz8oY2KRmwvKhhvLFG6rHmsJCQ.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo Narrow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/archivonarrow/v24/tss5ApVBdCYD5Q7hcxTE1ArZ0Zz8oY2KRmwvKhhvLFG6rXmsJCQ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo Narrow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/archivonarrow/v24/tss5ApVBdCYD5Q7hcxTE1ArZ0Zz8oY2KRmwvKhhvLFG6o3ms.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body{
+  background-color: black;
+  background-image: url(./images/logo.png);
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body::before{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: #8F8F8F;
+  opacity: 0.8;
+  
+}
+header{
+    padding: 150px 50px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+}
+.heading_text{
+  width: 100%;
+}
+ .heading_text > h1{
+    text-align: center;
+    font-size: 54px;
+    margin-bottom:10px
+} 
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main form button{
+      margin-top:25px ;
+  }
+  button {
+    background: #8bc34a;
+    color: #fff;
+    border: none;
+    font-size: 0.8em;
+    padding: 15px 15px;
+    /* margin: 20px; */
+    border-radius: 5px;
+    cursor: pointer;
+  }
+input,
+span,
+label{
+  font-family: 'Ubuntu', sans-serif;
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  font-size: 22px;
+}
+input:focus {
+    outline: 0;
+  }
+input.question{
+  font-size: 48px;
+  font-weight: 300;
+  border-radius: 2px;
+  margin: 0;
+  border: none;
+  width: 80%;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden;
+}
+input.question + label{
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 10%;
+  border-top: 1px solid red;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+}
+input.question:focus + label{
+  width: 80%;
+}
+input.question:focus,
+input.question:valid {
+  padding-top: 35px;
+}
+
+input.question:focus + label > span,
+input.question:valid + label > span {
+  top: -100px;
+  font-size: 22px;
+  color: #8bc34a;
+}
+
+input.question:valid + label {
+  border-color: green;
+}
+
+input.question:invalid{
+  box-shadow: none;
+}
+
+input.question + label > span{
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #fff;
+  font-size: 48px;
+  top: -66px;
+  left: 0px;
+  z-index: -1;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+input[type="submit"] {
+    background: #8bc34a;
+    color: #fff;
+    border: none;
+    font-size: 0.8em;
+    padding: 15px 15px;
+    /* margin: 20px; */
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer{
+  padding-top: 250px;
+}
+footer > .footer_image{
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+.footer_image > img {
+  width: 25%;
+  height: 200px;
+  margin: 0 10px;
+}
+footer > h2{
+  color: #fff;
+  margin: 20px 10px;
+  font-size: 25px;
+}
+
+@media screen and (max-width:400px) {
+  header {
+    padding: 0;
+    padding-top: 50px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+  }
+  .heading_text h1 {
+    font-size: 30px;
+    margin-bottom: 30px
+  }
+  .heading_text {
+    padding: 20px; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  input.question + label > span {
+    font-size: 35px;
+  }
+  .footer_image{
+    flex-wrap: wrap;
+  }
+  .footer_image > img {
+    width: 45%;
+    height: 200px;
+    margin: 10px calc(5%/2);
+}
+}
+
+
+
+
